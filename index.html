@@ -1,0 +1,58 @@
+<!--
+Linguagem de programação WEB
+Sistemas de Informação
+CEULP ULBRA
+Santhiago Dionizio Pinto
+santhiagosdp@gmail.com
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="receitas">
+    <head>
+        <meta charset="utf-8">
+        <title>Gerenciador de Receitas</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="node_modules/angular-loading-bar/build/loading-bar.min.css" />
+        <script src="node_modules/angular/angular.min.js"></script>
+        <script src="node_modules/angular-route/angular-route.min.js"></script>
+        <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+        <script src="node_modules/angular-loading-bar/build/loading-bar.min.js"></script>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    
+    <body>
+        <div class="container">
+            <h1><center>Gerenciador de Receitas</center></h1>
+            <hr noshade></hr>
+            <div>
+				<span ng-show="mostrarMenuInicio()"> </span>        
+                
+     <div class="tabbable">
+                <ul class="nav nav-tabs">
+                    <li> <a href="#/" class="nav nav-pills" data-toggle="tab" >
+                <span aria-hidden="true" class="glyphicon glyphicon-home"> Início</span></a></li>
+                    
+                     <li> <a href="#/receitas" class="nav nav-pills" data-toggle="tab" >
+                <span aria-hidden="true" class="glyphicon glyphicon-search "> Ver Receitas</span></a></li>
+                    
+                     <li> <a href="#/receitas/editor" class="nav nav-pills" data-toggle="tab" >
+                <span aria-hidden="true" class="glyphicon glyphicon-plus"> Cadastrar Receitas</span></a></li>
+                    
+                    <li> <a href="#/receitas/tipo" class="nav nav-pills" data-toggle="tab" >
+                <span aria-hidden="true" class="glyphicon glyphicon-plus"> Cadastrar Tipo</span></a></li>
+                    
+                </ul>
+        </div>
+                
+			</div>
+            <hr noshade></hr>
+
+            <div ng-view></div>
+    
+            <hr noshade></hr>
+        </div>
+    </body>
+
+</html>

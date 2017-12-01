@@ -1,0 +1,103 @@
+<!-- 
+Linguagem de programação WEB
+Sistemas de Informação
+CEULP ULBRA
+Santhiago Dionizio Pinto
+santhiagosdp@gmail.com
+-->
+<h2>Cadastro de Receitas</h2>
+
+<div>
+   <div class="row">         
+        <div class="col-md-2"> 
+            <label for="tipo">Tipo da receita</label>
+        <select class="form-control" id="tipo" ng-model="dado.tipo">
+            <option ng-repeat="tipo in tipos" value="{{tipo.id}}">{{tipo.nome}}</option>
+        </select>
+        </div>       
+		
+        <div class="col-md-4">
+           <div class="form-group">
+				<label for="nome">Nome da receita</label>
+					<input  type="text" class="form-control" id="nome" ng-model="dado.nome"
+					 placeholder="nome da receita" required>
+			</div>
+        </div>
+		<div class="col-md-2">
+            <div class="form-group">
+				<label for="tempo"> Tempo  total de  preparo</label></br>				
+					 <body>
+                            <div class="input-group bootstrap-timepicker timepicker">
+                                <input type="time" class="form-control input-small" id="tempo"
+                                     ng-model="dado.tempo" required >
+                                <span class="input-group-addon" ><i class="glyphicon glyphicon-time"></i></span>
+                            </div>
+                    </body>								
+			</div>		 
+		</div>
+		
+		<div class="col-md-4">
+           <div class="form-group">
+				<label for="chefe">Nome da chefe criador</label>
+					<input  type="text" class="form-control" id="chefe" ng-model="dado.chefe"
+					placeholder="Nome do chefe" required>
+			</div>
+			
+        </div>
+		
+    </div>
+	
+	 <div class="row">
+	
+        <div class="col-md-8">
+           <div class="form-group">
+				<label for="preparo">Modo de preparo</label>
+					<textarea  type="text"  class="form-control" rows="8" id="preparo"
+					ng-model="dado.preparo" placeholder="Descreva o modo de preparo" required></textarea>		 
+			</div>
+        </div>
+         
+         
+         
+         <div class="col-md-4">
+             </br>
+                
+                 <span class="btn btn-default btn-file">
+    Browse <input type="file">
+                     
+</span>
+                
+        </div>
+		
+    </div>
+		
+</div>
+	
+	
+<form class="form">    
+    
+    <div>
+        <button class="btn btn-primary" ng-click="salvar(dado)" type="button">
+                <span aria-hidden="true" class="glyphicon glyphicon-floppy-save"></span>
+                Salvar Receita
+        </button>
+        
+        <button class="btn btn-default" ng-click="cancelar()" type="button">
+            <span aria-hidden="true" class="glyphicon glyphicon-floppy-remove"></span>
+            Cancelar
+        </button>
+        
+        
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+<!-- 
+Linguagem de programação WEB
+Sistemas de Informação
+CEULP ULBRA
+Santhiago Dionizio Pinto
+santhiagosdp@gmail.com
+-->
+<h2>Receitas Cadastradas</h2>
+<div class="well well-small">
+    <div class="row ">
+        
+        <div class="col-md-6">
+					
+            <div class="input-group">
+                <input class="form-control" ng-model="q" placeholder="Pesquisar..." type="text">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-search"></span>
+                </span>
+				
+            </div>
+        </div>
+        
+        <div class="col-md-6">            
+			<center>
+               <a href="#/receitas/editor" class="btn btn-default">
+                    <span aria-hidden="true" class="glyphicon glyphicon-share"></span>
+                    Cadastrar Receita
+                </a>
+            </center>
+		</div>			
+					
+    </div>
+</div>
+</div>
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Tipo</th>
+            <th>Nome</th>
+            <th>Tempo Total de Preparo</th>
+			<th>Opções</tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="dado in dados | filter:q | orderBy:tipo"> 
+            <td>{{dado.id}}</td>
+            <td>{{dado.tipo}}</td>
+            <td>{{dado.nome}}</td>
+			<td>{{dado.tempo}}</td>			  
+            <td>
+                <button class="btn btn-default btn-xs" ng-click="editar(dado.id)" type="button">
+                    <span aria-hidden="true" class="glyphicon glyphicon-edit"></span>
+                </button>
+				<button class="btn btn-danger btn-xs" ng-click="delete(dado, dado.id)" type="button">
+                    <span aria-hidden="true" class="glyphicon glyphicon-trash"></span>
+                </button>
+				<button class="btn btn-default btn-xs" ng-click="ver(dado)" class="btn btn-default">
+                    <span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span>
+                </button>                
+            </td>
+        </tr>
+    </tbody>
+</table>

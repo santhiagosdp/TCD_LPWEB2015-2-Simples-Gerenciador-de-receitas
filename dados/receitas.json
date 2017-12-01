@@ -1,0 +1,23 @@
+[
+    {		
+        "nome" : "bolo bacalhau",
+        "tipo": "bolos salgados",
+		"chefe" : "teste chefe criador",
+		"preparo" : "descrição do modo de preparo ok",
+		"tempo" : "01:00:00"
+    },
+    {
+	   "nome" : "frango assado no sache",
+        "tipo": "assados",
+		"chefe" : "1 teste chefe criador",
+		"preparo" : "1 descrição do modo de preparo ok",
+		"tempo" : "01:00:00"
+    },    
+    {
+		"nome" : "batata temperada molho frango",
+        "tipo": "acompanhamentos",
+		"chefe" : "2 teste chefe criador",
+		"preparo" : "2 descrição do modo de preparo ok",
+		"tempo" : "01:00:00"
+    }
+]
